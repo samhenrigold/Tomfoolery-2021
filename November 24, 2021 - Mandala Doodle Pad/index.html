@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="viewport-fit=auto, width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="HandheldFriendly" content="true" />
+    <meta names="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <title>Mandala Doodle Pad</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="./scripts/prefs.js" defer></script>
+    <script src="./scripts/helpers.js" defer></script>
+    <script src="./scripts/index.js" defer></script>
+</head>
+<body>
+  <canvas id="drawCanvas">Your browser doesn't support canvas.</canvas>
+  <aside id="controls">
+    <button onclick="ctx.clearRect(0,0,canvas.width,canvas.height); points=[]; strokeHistory=[]" id="reset-btn"><span>⎚</span></button>
+    <button onclick="toggleSwirly()" id="swirly-btn" class=""><span>🌀</span></button>
+    <button onclick="cycleRadian()" id="radian-btn"><span>8</span></button>
+    <button id="color-btn"><input type="color" id="color-input" onchange="changeColor()" value="#1a202c"></button>
+    <button id="info-btn" onclick="toggleBanner()">ⓘ</button>
+  </aside>
+  <aside id="info-banner" class="hidden">
+    <h2 class="f5 f3-ns lh-copy ma0 pa0">Created by Sam Henri-Gold, 2021</h2>
+    <h1 class="f3 f1-ns lh-title mt0 mb1">Mandala Doodle Pad</h1>
+    <p class="gray f5 lh-copy">A mandala is a spiritual and ritual symbol in Hinduism and Buddhism, representing the universe. I just think they look neat, so I built this web toy that lets you draw them.</p>
+    <p class="gray f5 lh-copy">If you're using a device that supports input pressure (like Apple Pencil), press harder to draw thicker lines. Or use a gentle touch for wispy hairlines.</p>
+    <p class="gray f5 lh-copy">The source code for Mandala Doodle pad is available on <a href="https://github.com/samhenrigold/sh.g/tree/main/src/assets/blog/mandala">GitHub</a>. You can help out with issues <a href="https://github.com/samhenrigold/sh.g/issues">here</a>. Parts of this web toy's code are licensed under MIT from <a href="https://github.com/Icesofty/Mandala-JS">Mandala-JS</a>.</p>
+  </aside>
+</body>
+</html>

@@ -1,0 +1,103 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap');
+
+:root {
+    --background-primary: hsl(240, 11%, 96%);
+    --background-secondary: hsl(240, 11%, 86%);
+    --background-textured: linear-gradient(hsl(240, 11%, 89%), hsl(240, 11%, 86%));
+    --text: 29,29,31;
+    --text-primary: rgba(var(--text),1);
+    --text-secondary: rgba(var(--text),0.65);
+    --text-dark: rgba(29,29,31,1);
+    --text-light: rgba(245,245,247,1);
+    --text-link: hsl(210, 100%, 40%);
+    --text-link-hover: hsl(210, 100%, 45%);
+    --cubicCurve: cubic-bezier(.42,0,.58,1);
+}
+
+[data-theme="dark"] {
+    --background-primary: hsl(0, 0%, 11%);
+    --background-secondary: hsl(0, 0%, 21%);
+    --background-textured: linear-gradient(hsl(0, 0%, 23%), hsl(0, 0%, 21%));
+    --text: 245,245,247;
+    --text-primary: rgba(var(--text),1);
+    --text-secondary: rgba(var(--text),0.65);
+    --text-link: hsl(210, 100%, 55%);
+    --text-link-hover: hsl(210, 100%, 60%);
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', 'Helvetica', Oxygen, Ubuntu, Cantarell, 'Open Sans', sans-serif;
+    background: var(--background-primary);
+    color: var(--text-primary);
+    font-weight: 500;
+}
+
+h1 {
+    font-size: 2em;
+}
+
+ul {
+    display: flex;
+    list-style: none;
+    justify-content: space-between;
+    text-transform: lowercase;
+}
+
+a {
+    text-decoration: none;
+    color: var(--text-link);
+}
+
+a:hover {
+    color: var(--text-link-hover);
+    text-decoration: underline;
+}
+
+p {
+    color: var(--text-secondary);
+    text-justify: inter-character;
+}
+
+footer p {
+    text-decoration: none;
+    color: var(--text-link);
+}
+
+footer a:hover {
+    color: var(--text-link-hover);
+    text-decoration: underline;
+}
+
+.hidden {
+    opacity: 0;
+}
+
+  @keyframes shakeError {
+    8%, 41% {
+        -webkit-transform: translateX(-6px);
+        transform: translateX(-6px);
+    }
+    25%, 58% {
+        -webkit-transform: translateX(6px);
+        transform: translateX(6px);
+    }
+    75% {
+        -webkit-transform: translateX(-3px);
+        transform: translateX(-3px);
+    }
+    92% {
+        -webkit-transform: translateX(3px);
+        transform: translateX(3px);
+    }
+    0%, 100% {
+        -webkit-transform: translateX(0);
+        transform: translateX(0);
+    }
+  }

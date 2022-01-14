@@ -1,0 +1,22 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#HUD {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    top: 10px;
+    left: 10px;
+}
+
+button {
+    color: red;
+    font-weight: bold;
+}
+
+#customColorField {
+    width: 44pt;
+}

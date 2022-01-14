@@ -1,0 +1,127 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+html {
+    color: white;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+body {
+    transition: background-image 1s;
+}
+
+header + main {
+    width: 90vw;
+    max-width: 1100px;
+    min-width: 600px;
+    margin: auto;
+}
+
+header {
+    display: flex;
+    justify-content: space-evenly;
+    align-content: center;
+    margin: 2rem 0;
+    color: black;
+    text-decoration: rebeccapurple;
+    text-decoration-style: wavy;
+}
+
+button {
+    background-color: yellow;
+    border-radius: 8px;
+    border: 3px solid black;
+    font-weight: bold;
+    padding: 0.5rem;
+    cursor: pointer;
+    transition: box-shadow 0.2s;
+}
+
+main {
+    background-color: rebeccapurple;
+    border-radius: 12px;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-column-gap: 3rem;
+    padding: 2rem;
+}
+
+#col1 {
+    font-size: 2em;
+    border-right: 2px solid yellow;
+}
+
+#col2 {
+    height: 100%;
+    line-height: 1.15em;
+}
+
+#col2 li {
+    margin-bottom: 1.25em;
+}
+
+
+.full {
+    transition: all 0.8s;
+}
+
+.mini {
+    transition: all 1s cubic-bezier(0.65, 0.05, 0.36, 1);
+    border-radius: 8px;
+    overflow: hidden;
+    transform: scale(0.5) translateY(-70px);
+    box-shadow: 3px 12px 20px rgba(0,0,0,0.2);
+    z-index: 0;
+    /* replace 3vw with something to figure out how to limit width */
+}
+
+#backside-card {
+    background-image: url(paper.jpg);
+    background-size: auto;
+    background-repeat: repeat;
+}
+
+#backside-card>form {
+    display: flex;
+    flex-direction: column;
+}
+
+input {
+    font-size: 2em;
+    background-color: transparent;
+    border: none;
+    border-bottom: 4px dotted gray;
+}
+
+@media only screen and (min-aspect-ratio: 21/9) {
+    .mini {
+        animation-name: page-crop;
+        animation-duration: 1s;
+        animation-timing-function: cubic-bezier(.42,0,.58,1);
+        animation-fill-mode: forwards;
+    }
+}
+
+@keyframes page-crop {
+    0%   {
+        clip-path: inset(0 0% round 0px);
+      }
+    100%   {
+        clip-path: inset(0 25% round 8px);
+      }
+}
+
+@keyframes card-flip {
+    0%   {
+        transform: rotateX(0deg);
+        position: relative;
+      }
+    100%   {
+        transform: rotateX(180deg);
+        position: ;
+      }
+}
+

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RevealTest</title>
+    <script>
+        window.addEventListener('scroll', () => {
+            document.body.style.setProperty('--scroll',window.pageYOffset / (document.body.offsetHeight - window.innerHeight));
+        }, false);
+    </script>
+    <style>
+        
+        h1 {
+            position: fixed;
+            transform: scale(20);
+            transform-origin: top left;
+            animation: glide 1s linear infinate;
+            animation-play-state: paused;
+            animation-delay: calc(var(--scroll) * -1s);
+            animation-iteration-count: 1;
+            animation-fill-mode: both;
+        }
+
+        @keyframes glide {
+            to {
+                transform-origin: top right;
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <div>
+        <h1>CSS Zen Garden</h1>
+    </div>
+</body>
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TweenMax.min.js" integrity="sha512-8Wy4KH0O+AuzjMm1w5QfZ5j5/y8Q/kcUktK9mPUVaUoBvh3QPUZB822W/vy7ULqri3yR8daH3F58+Y8Z08qzeg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.8/ScrollMagic.min.js" integrity="sha512-8E3KZoPoZCD+1dgfqhPbejQBnQfBXe8FuwL4z/c8sTrgeDMFEnoyTlH3obB4/fV+6Sg0a0XF+L/6xS4Xx1fUEg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.8/plugins/animation.gsap.min.js" integrity="sha512-5/OHwmQzDSBS0Ous4/hlYoWLHd06/d2r7LdKZQVBXOA6PvOqWVXtdboiLTU7lQTGyVoKVTNkwi0ol4gHGlw5ww==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>   
+    <title>Scroll Reveal Test</title>
+</head>
+<body>
+    <main>
+        <h1 class="curtain">
+            <span>Howdy!</span>
+        </h1>
+
+        <span id="helper">
+            <svg width="68" height="20" aria-hidden="true">
+                <path/>
+            </svg>
+        </span>
+
+        <section class="spacefiller" aria-hidden="true"></section>
+        <section class="clienttable">
+            <article class="client" id="REDACTED">
+                <h2>(REDACTED)</h2>
+                <h2>2021</h2>
+            </article>
+
+            <article class="client" id="mstd">
+                <h2>Mastodon</h2>
+                <h2>2021</h2>
+            </article>
+
+            <article class="client" id="REDACTED_2">
+                <h2>(REDACTED)</h2>
+                <h2>2020</h2>
+            </article>
+
+            <article class="client" id="bw">
+                <h2>Buildwatch</h2>
+                <h2>2020</h2>
+            </article>
+
+            <article class="client" id="stickerpack">
+                <h2>Indie Sticker Pack</h2>
+                <h2>2020</h2>
+            </article>
+
+            <article class="client" id="nh">
+                <h2>Nighthawk for Twitter</h2>
+                <h2>2019</h2>
+            </article>
+
+        </section>
+    </main>
+</body>
+<script src="app.min.js"></script>
+</html>

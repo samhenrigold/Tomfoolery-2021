@@ -1,0 +1,54 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+#game {
+    width: 320pt;
+    height: 480pt;
+    border: 1pt solid black;
+    margin: auto;
+    background-color: lightyellow;
+    overflow: hidden;
+}
+
+#player {
+    position: relative;
+    background-color:#c3e03e;
+    border-radius: 50%;
+    border: 1pt solid black;
+    width: 44pt;
+    height: 44pt;
+    z-index: 998;
+    left: 0px;
+    top: 0px;
+}
+
+.platform {
+    width: 100%;
+    height: 22pt;
+    background-color: rgb(42, 175, 37);
+    position: relative;
+    top: 100px;
+    margin-top: -22pt;
+}
+
+.platformGap {
+    width: 72pt;
+    height: 22pt;
+    background-color: lightyellow;
+    position: relative;
+    top: 100px;
+    margin-top: -22pt;
+}
+
+#score {
+    width: 320pt;
+    z-index: 999;
+    text-align: center;
+    font-family: sans-serif;
+    text-shadow: 0 5px 10px white;
+    font-size: 2em;
+    font-weight: bold;
+}

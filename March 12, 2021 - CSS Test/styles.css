@@ -1,0 +1,54 @@
+* { 
+	box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    height: 100vh;
+    background-image: linear-gradient( 135deg, #43CBFF 10%, #9708CC 100%);
+}
+
+.parent {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.checkParent {
+    place-self: start;
+}
+
+.control-me {
+    border-radius: 1em;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    box-shadow: 0 0 2rem 0 rgba(0, 0, 0, 0.15);
+    width: 400px;
+    height: 256px;
+    overflow: hidden;
+    background-color: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px) contrast(50%) brightness(130%);
+    transition: transform 0.8s cubic-bezier(0.83, 0, 0.17, 1); 
+    transform: scale(1.0);
+}
+
+.control-me::after {
+    content: "😃";
+    transform: scale(1.0);
+    font-size: 100px;
+}
+#toggle:checked ~ .control-me::after {
+    content: "😩";
+    transform: scale(1.5);
+}
+
+label {
+    background: #A5D6A7;
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+}
+
+.visually-hidden {
+    position: absolute;
+    left: -100vw;

@@ -1,0 +1,128 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;500;900&display=swap');
+
+:root {
+    --numOfClients: 6;
+    --size: 10em;
+    --ad: 0.25;
+    --cubicCurve: cubic-bezier(.42,0,.58,1);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow-x: hidden;
+    -webkit-font-smoothing: subpixel-antialiased;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    height: 100%;
+    overflow: auto;
+}
+
+.curtain {
+    position: fixed;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #000;
+    color: white;
+    mix-blend-mode: multiply;
+}
+
+.curtain span {
+    white-space: nowrap;
+    text-align: center;
+    overflow: visible;
+    font-size: var(--size);
+    font-weight: 500;
+    transform: matrix(var(--ad), 0, 0, var(--ad), 0, 0);
+    user-select: none;
+}
+
+@keyframes helperReveal {
+    from { opacity: 0 }
+    to { opacity: .5 }
+}
+
+@keyframes helper {
+    from {bottom: 18pt;}
+    to {bottom: 22pt;}
+}
+
+@keyframes pathShift {
+    from { d: path("M2 2l30.2 15.1a4 4 0 003.6 0L66 2"); }
+    to { d: path("M2 2l30.2 13.1a4 4 0 003.6 0L66 2"); }
+}
+
+#helper {
+    position: fixed;
+    opacity: 0;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    overflow: visible;
+    animation: helper 2s var(--cubicCurve) infinite alternate-reverse, helperReveal 2s var(--cubicCurve) 2s forwards;
+}
+
+.hidden {
+    opacity: 0;
+}
+
+#helper > svg { overflow: inherit; }
+
+#helper > svg > path {
+    stroke: #fff;
+    stroke-width: 4;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    fill: none;
+    animation-name: pathShift;
+    animation-duration: 2s;
+    animation-iteration-count:infinite;
+    animation-direction: alternate-reverse;
+    animation-timing-function: cubic-bezier(.42,0,.58,1);
+    transition: opacity 1s var(--cubicCurve);
+}
+
+.spacefiller {
+    height: 50vh;
+}
+
+.clienttable {
+    height: 100vh;
+    width: 100vw;
+}
+
+.clienttable article {
+    width: 100vw;
+    height: calc(100vh/var(--numOfClients));
+    /* cursor: pointer; */
+}
+
+#REDACTED {
+    background-color: aqua;
+}
+
+#mstd {
+    background-color: cornflowerblue;
+}
+
+#REDACTED_2 {
+    background-color: forestgreen;
+}
+
+#bw {
+    background-color: darkslategray;
+}
+
+#stickerpack {
+    background-color: #ff034a;
+}
+
+#nh {
+    background-color: #5856d6;
+}

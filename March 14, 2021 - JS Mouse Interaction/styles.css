@@ -1,0 +1,25 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+#box {
+    position: relative;
+    left: 0px;
+    top: 0px;
+    width: 400px;
+    height: 220px;
+    background-color: gray;
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2);
+    padding: 8px;
+    border-radius: 12px;
+    transition: height .2s ease-out;
+}
+
+#titleBar {
+    border-radius: 50%;
+    width: 22px;
+    height: 22px;
+    background-color: rgb(199, 210, 230);
+}
