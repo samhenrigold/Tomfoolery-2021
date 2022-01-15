@@ -1,0 +1,42 @@
+html {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: hsl(332, 82%, 87%);
+    color: hsl(332, 30%, 28%);
+    font-family: "Arial Rounded MT Bold", "Arial Rounded MT", "SF Pro Rounded";
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 2rem 0 4rem;
+}
+
+#bmark-btn {
+    background: white;
+    padding: 1rem 2rem;
+    border-radius: 25px;
+    cursor: pointer;
+}
+
+#bmark-btn::after {
+    content: 'Drag to your bookmark bar (or click to test)'
+}
+
+a > #bmark-btn {
+    text-decoration: none;
+}
+
+a { color: inherit; }
+
+
+#demo-article {
+    margin: 0 auto;
+    max-width: 600px;
+}
